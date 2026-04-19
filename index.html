@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MesasExp - Selección de Marca</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <h1>MesasExp - Selecciona una mesa</h1>
+        <p>Elige una mesa para ver los equipos disponibles y acceder al formulario prellenado.</p>
+      </section>
+
+      <section id="card-list" class="card-list" aria-label="Tarjetas de mesas"></section>
+
+      <section id="detail-section" class="detail-section hidden">
+        <div class="detail-card">
+          <h2 id="detail-title"></h2>
+          <div id="detail-description"></div>
+          <button id="back-button" class="button button-secondary">← Volver a mesas</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

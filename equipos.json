@@ -1,0 +1,378 @@
+[
+  {
+    "id": 1,
+    "nombre": "iPhone 16 Plus",
+    "mesaId": "apple",
+    "posicion": 4,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 2,
+    "nombre": "iPhone 16e",
+    "mesaId": "apple",
+    "posicion": 5,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 3,
+    "nombre": "iPhone 16 ProMax",
+    "mesaId": "apple",
+    "posicion": 2,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 4,
+    "nombre": "iPhone 16 Pro",
+    "mesaId": "apple",
+    "posicion": 3,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 5,
+    "nombre": "iPhone 15 Pro",
+    "mesaId": "apple",
+    "posicion": 1,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 6,
+    "nombre": "Mate 80 Pro",
+    "mesaId": "huawei",
+    "posicion": 1,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 7,
+    "nombre": "Pura 80 Pro",
+    "mesaId": "huawei",
+    "posicion": 2,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 8,
+    "nombre": "Pura 80",
+    "mesaId": "huawei",
+    "posicion": 3,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 9,
+    "nombre": "Nova 14 Pro",
+    "mesaId": "huawei",
+    "posicion": 4,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 10,
+    "nombre": "Nova 14",
+    "mesaId": "huawei",
+    "posicion": 5,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 11,
+    "nombre": "realme 11",
+    "mesaId": "multimarca",
+    "posicion": 1,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 12,
+    "nombre": "Honor 70",
+    "mesaId": "multimarca",
+    "posicion": 2,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 13,
+    "nombre": "Honor X8a",
+    "mesaId": "multimarca",
+    "posicion": 3,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 14,
+    "nombre": "moto G04",
+    "mesaId": "multimarca",
+    "posicion": 4,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 15,
+    "nombre": "moto G14",
+    "mesaId": "multimarca",
+    "posicion": 5,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 16,
+    "nombre": "moto G53",
+    "mesaId": "multimarca",
+    "posicion": 6,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 17,
+    "nombre": "Redmi Note 12S",
+    "mesaId": "multimarca",
+    "posicion": 8,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 18,
+    "nombre": "Redmi 12",
+    "mesaId": "multimarca",
+    "posicion": 7,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 19,
+    "nombre": "Z Flip7",
+    "mesaId": "samsung",
+    "posicion": 4,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 20,
+    "nombre": "Z Fold7",
+    "mesaId": "samsung",
+    "posicion": 5,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 21,
+    "nombre": "S26 Ultra",
+    "mesaId": "samsung",
+    "posicion": 6,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 22,
+    "nombre": "S26+",
+    "mesaId": "samsung",
+    "posicion": 7,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 23,
+    "nombre": "S25 Ultra",
+    "mesaId": "samsung",
+    "posicion": 9,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 24,
+    "nombre": "S25 Edge",
+    "mesaId": "samsung",
+    "posicion": 10,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 25,
+    "nombre": "A37",
+    "mesaId": "samsung",
+    "posicion": 1,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 26,
+    "nombre": "A57",
+    "mesaId": "samsung",
+    "posicion": 2,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 27,
+    "nombre": "S25 FE",
+    "mesaId": "samsung",
+    "posicion": 3,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 28,
+    "nombre": "S26",
+    "mesaId": "samsung",
+    "posicion": 8,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 29,
+    "nombre": "A6x",
+    "mesaId": "oppo",
+    "posicion": 1,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 30,
+    "nombre": "A5",
+    "mesaId": "oppo",
+    "posicion": 2,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 31,
+    "nombre": "A5 Pro",
+    "mesaId": "oppo",
+    "posicion": 3,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 32,
+    "nombre": "A5 Pro 5G",
+    "mesaId": "oppo",
+    "posicion": 4,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 33,
+    "nombre": "A6 Pro",
+    "mesaId": "oppo",
+    "posicion": 5,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 34,
+    "nombre": "Reno 14",
+    "mesaId": "oppo",
+    "posicion": 6,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 35,
+    "nombre": "Reno 14F",
+    "mesaId": "oppo",
+    "posicion": 7,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 36,
+    "nombre": "A6K",
+    "mesaId": "oppo",
+    "posicion": 8,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 37,
+    "nombre": "Find X8 Pro",
+    "mesaId": "oppo",
+    "posicion": 9,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 38,
+    "nombre": "Y04",
+    "mesaId": "vivo",
+    "posicion": 1,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 39,
+    "nombre": "Y19S",
+    "mesaId": "vivo",
+    "posicion": 2,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 40,
+    "nombre": "Y28",
+    "mesaId": "vivo",
+    "posicion": 3,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 41,
+    "nombre": "Y21D",
+    "mesaId": "vivo",
+    "posicion": 4,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 42,
+    "nombre": "Y29",
+    "mesaId": "vivo",
+    "posicion": 5,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 43,
+    "nombre": "V50",
+    "mesaId": "vivo",
+    "posicion": 6,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 44,
+    "nombre": "V70 FE",
+    "mesaId": "vivo",
+    "posicion": 7,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 45,
+    "nombre": "V60 Lite",
+    "mesaId": "vivo",
+    "posicion": 8,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 46,
+    "nombre": "V40 Lite",
+    "mesaId": "vivo",
+    "posicion": 9,
+    "activo": true,
+    "comentario": ""
+  },
+  {
+    "id": 47,
+    "nombre": "V50 Lite",
+    "mesaId": "vivo",
+    "posicion": 10,
+    "activo": true,
+    "comentario": ""
+  }
+]

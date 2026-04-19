@@ -1,0 +1,44 @@
+[
+  {
+    "id": "apple",
+    "mesa": "Apple",
+    "posiciones": 5,
+    "distrib": "1:4",
+    "comentario": ""
+  },
+  {
+    "id": "huawei",
+    "mesa": "Huawei",
+    "posiciones": 5,
+    "distrib": "0:5",
+    "comentario": ""
+  },
+  {
+    "id": "samsung",
+    "mesa": "Samsung",
+    "posiciones": 10,
+    "distrib": "5:5",
+    "comentario": ""
+  },
+  {
+    "id": "multimarca",
+    "mesa": "Multimarca",
+    "posiciones": 8,
+    "distrib": "3:5",
+    "comentario": ""
+  },
+  {
+    "id": "vivo",
+    "mesa": "Vivo",
+    "posiciones": 10,
+    "distrib": "5:5",
+    "comentario": ""
+  },
+  {
+    "id": "oppo",
+    "mesa": "Oppo",
+    "posiciones": 9,
+    "distrib": "5:4",
+    "comentario": ""
+  }
+]
