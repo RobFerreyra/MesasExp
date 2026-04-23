@@ -72,6 +72,84 @@ body {
   line-height: 1.6;
 }
 
+.card.mesa-selected {
+  border-color: rgba(37, 99, 235, 0.5);
+  box-shadow: 0 28px 50px rgba(37, 99, 235, 0.15);
+  background: #f8faff;
+}
+
+.equipos-expandidos {
+  background: #fafbfc;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-top: none;
+  border-radius: 0 0 22px 22px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.equipos-expandidos.hidden {
+  display: none;
+}
+
+.equipos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.equipos-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.card-equipo {
+  background: #ffffff;
+  border: 2px solid rgba(37, 99, 235, 0.18);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.card-equipo:hover,
+.card-equipo:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  background: #f0f4ff;
+}
+
+.card-equipo h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #1e40af;
+  word-break: break-word;
+}
+
+.card-equipo p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.card-equipo.is-empty {
+  border: none;
+  cursor: default;
+  box-shadow: none;
+}
+
 .detail-section {
   margin-top: 2rem;
 }
@@ -140,5 +218,27 @@ body {
 
   .card {
     padding: 1.25rem;
+  }
+
+  .equipos-expandidos {
+    padding: 1rem;
+  }
+
+  .equipos-grid {
+    gap: 0.75rem;
+  }
+
+  .card-equipo {
+    padding: 1rem;
+    min-height: 70px;
+    font-size: 0.875rem;
+  }
+
+  .card-equipo h3 {
+    font-size: 0.9rem;
+  }
+
+  .card-equipo p {
+    font-size: 0.75rem;
   }
 }

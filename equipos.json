@@ -163,7 +163,7 @@
     "id": 21,
     "nombre": "S26 Ultra",
     "mesaId": "samsung",
-    "posicion": 6,
+    "posicion": 10,
     "activo": true,
     "comentario": ""
   },
@@ -171,7 +171,7 @@
     "id": 22,
     "nombre": "S26+",
     "mesaId": "samsung",
-    "posicion": 7,
+    "posicion": 9,
     "activo": true,
     "comentario": ""
   },
@@ -179,7 +179,7 @@
     "id": 23,
     "nombre": "S25 Ultra",
     "mesaId": "samsung",
-    "posicion": 9,
+    "posicion": 7,
     "activo": true,
     "comentario": ""
   },
@@ -187,7 +187,7 @@
     "id": 24,
     "nombre": "S25 Edge",
     "mesaId": "samsung",
-    "posicion": 10,
+    "posicion": 6,
     "activo": true,
     "comentario": ""
   },
@@ -227,7 +227,7 @@
     "id": 29,
     "nombre": "A6x",
     "mesaId": "oppo",
-    "posicion": 1,
+    "posicion": 5,
     "activo": true,
     "comentario": ""
   },
@@ -235,7 +235,7 @@
     "id": 30,
     "nombre": "A5",
     "mesaId": "oppo",
-    "posicion": 2,
+    "posicion": 4,
     "activo": true,
     "comentario": ""
   },
@@ -243,7 +243,7 @@
     "id": 31,
     "nombre": "A5 Pro",
     "mesaId": "oppo",
-    "posicion": 3,
+    "posicion": 2,
     "activo": true,
     "comentario": ""
   },
@@ -251,7 +251,7 @@
     "id": 32,
     "nombre": "A5 Pro 5G",
     "mesaId": "oppo",
-    "posicion": 4,
+    "posicion": 3,
     "activo": true,
     "comentario": ""
   },
@@ -259,15 +259,23 @@
     "id": 33,
     "nombre": "A6 Pro",
     "mesaId": "oppo",
-    "posicion": 5,
+    "posicion": 1,
     "activo": true,
     "comentario": ""
+  },
+  {
+    "id": 48,
+    "nombre": "",
+    "mesaId": "oppo",
+    "posicion": 9,
+    "activo": false,
+    "comentario": "Espacio ocupado con audifonos"
   },
   {
     "id": 34,
     "nombre": "Reno 14",
     "mesaId": "oppo",
-    "posicion": 6,
+    "posicion": 10,
     "activo": true,
     "comentario": ""
   },
@@ -275,7 +283,7 @@
     "id": 35,
     "nombre": "Reno 14F",
     "mesaId": "oppo",
-    "posicion": 7,
+    "posicion": 8,
     "activo": true,
     "comentario": ""
   },
@@ -283,7 +291,7 @@
     "id": 36,
     "nombre": "A6K",
     "mesaId": "oppo",
-    "posicion": 8,
+    "posicion": 7,
     "activo": true,
     "comentario": ""
   },
@@ -291,7 +299,7 @@
     "id": 37,
     "nombre": "Find X8 Pro",
     "mesaId": "oppo",
-    "posicion": 9,
+    "posicion": 6,
     "activo": true,
     "comentario": ""
   },
@@ -299,7 +307,7 @@
     "id": 38,
     "nombre": "Y04",
     "mesaId": "vivo",
-    "posicion": 1,
+    "posicion": 5,
     "activo": true,
     "comentario": ""
   },
@@ -307,7 +315,7 @@
     "id": 39,
     "nombre": "Y19S",
     "mesaId": "vivo",
-    "posicion": 2,
+    "posicion": 4,
     "activo": true,
     "comentario": ""
   },
@@ -323,7 +331,7 @@
     "id": 41,
     "nombre": "Y21D",
     "mesaId": "vivo",
-    "posicion": 4,
+    "posicion": 2,
     "activo": true,
     "comentario": ""
   },
@@ -331,7 +339,7 @@
     "id": 42,
     "nombre": "Y29",
     "mesaId": "vivo",
-    "posicion": 5,
+    "posicion": 1,
     "activo": true,
     "comentario": ""
   },
@@ -339,7 +347,7 @@
     "id": 43,
     "nombre": "V50",
     "mesaId": "vivo",
-    "posicion": 6,
+    "posicion": 10,
     "activo": true,
     "comentario": ""
   },
@@ -347,7 +355,7 @@
     "id": 44,
     "nombre": "V70 FE",
     "mesaId": "vivo",
-    "posicion": 7,
+    "posicion": 9,
     "activo": true,
     "comentario": ""
   },
@@ -363,7 +371,7 @@
     "id": 46,
     "nombre": "V40 Lite",
     "mesaId": "vivo",
-    "posicion": 9,
+    "posicion": 7,
     "activo": true,
     "comentario": ""
   },
@@ -371,7 +379,7 @@
     "id": 47,
     "nombre": "V50 Lite",
     "mesaId": "vivo",
-    "posicion": 10,
+    "posicion": 6,
     "activo": true,
     "comentario": ""
   }
