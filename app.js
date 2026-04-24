@@ -325,11 +325,11 @@ function buildFormUrl(mesa, equipo) {
   const params = new URLSearchParams({
     // 'mesa': mesa.mesa,
     'id': "t3MfOZClrUOY8IsFCYrMyJ0kez3gW0dBm3VfYHvC51hUMzc4OEtNN1RMNlcyNjNURVJQVDIxM0RGUi4u",
-    'r54c22649fe74475ca36d0589c07c95d5': encodeURIComponent(equipo.nombre),
+    'r54c22649fe74475ca36d0589c07c95d5': equipo.nombre,
     'rf5b8727fc3ae40ceaca472193b0b4332': "Si",
   });
   console.log(params.toString());
-  return `${baseUrl}?${params.toString()}`;
+  return `${baseUrl}?${params.toString().replace(/\+/g, '%20')}`;
 }
 
 mq.addEventListener('change', () => {
