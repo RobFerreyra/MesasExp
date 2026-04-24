@@ -317,7 +317,7 @@ function selectEquipo(equipo) {
   const formUrl = buildFormUrl(selectedMesa, equipo);
   // console.log('URL generada:', formUrl);
   // alert(`Equipo seleccionado: ${equipo.nombre}\n\nURL del formulario:\n${formUrl}`);
-  // window.location.href = formUrl; // Descomentar para redirigir al formulario
+  window.location.href = formUrl; // Descomentar para redirigir al formulario
 }
 
 function buildFormUrl(mesa, equipo) {
@@ -328,7 +328,7 @@ function buildFormUrl(mesa, equipo) {
     'r54c22649fe74475ca36d0589c07c95d5': equipo.nombre,
     'rf5b8727fc3ae40ceaca472193b0b4332': "Si",
   });
-  console.log(params.toString());
+  // console.log(params.toString());
   return `${baseUrl}?${params.toString().replace(/\+/g, '%20')}`;
 }
 
