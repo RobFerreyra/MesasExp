@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "iPhone 16 Plus",
     "mesaId": "apple",
-    "posicion": 4,
+    "posicion": 6,
     "activo": true,
     "comentario": ""
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "nombre": "iPhone 16 ProMax",
     "mesaId": "apple",
-    "posicion": 2,
+    "posicion": 8,
     "activo": true,
     "comentario": ""
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "nombre": "iPhone 16 Pro",
     "mesaId": "apple",
-    "posicion": 3,
+    "posicion": 7,
     "activo": true,
     "comentario": ""
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "nombre": "iPhone 15 Pro",
     "mesaId": "apple",
-    "posicion": 1,
+    "posicion": 4,
     "activo": true,
     "comentario": ""
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "nombre": "Mate 80 Pro",
     "mesaId": "huawei",
-    "posicion": 1,
+    "posicion": 5,
     "activo": true,
     "comentario": ""
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "nombre": "Pura 80 Pro",
     "mesaId": "huawei",
-    "posicion": 2,
+    "posicion": 4,
     "activo": true,
     "comentario": ""
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "nombre": "Nova 14 Pro",
     "mesaId": "huawei",
-    "posicion": 4,
+    "posicion": 2,
     "activo": true,
     "comentario": ""
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "nombre": "Nova 14",
     "mesaId": "huawei",
-    "posicion": 5,
+    "posicion": 1,
     "activo": true,
     "comentario": ""
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "nombre": "realme 11",
     "mesaId": "multimarca",
-    "posicion": 1,
+    "posicion": 5,
     "activo": true,
     "comentario": ""
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "nombre": "Honor 70",
     "mesaId": "multimarca",
-    "posicion": 2,
+    "posicion": 3,
     "activo": true,
     "comentario": ""
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "nombre": "Honor X8a",
     "mesaId": "multimarca",
-    "posicion": 3,
+    "posicion": 1,
     "activo": true,
     "comentario": ""
   },
@@ -107,7 +107,7 @@
     "id": 14,
     "nombre": "moto G04",
     "mesaId": "multimarca",
-    "posicion": 4,
+    "posicion": 10,
     "activo": true,
     "comentario": ""
   },
@@ -115,7 +115,7 @@
     "id": 15,
     "nombre": "moto G14",
     "mesaId": "multimarca",
-    "posicion": 5,
+    "posicion": 9,
     "activo": true,
     "comentario": ""
   },
@@ -123,7 +123,7 @@
     "id": 16,
     "nombre": "moto G53",
     "mesaId": "multimarca",
-    "posicion": 6,
+    "posicion": 8,
     "activo": true,
     "comentario": ""
   },
@@ -131,7 +131,7 @@
     "id": 17,
     "nombre": "Redmi Note 12S",
     "mesaId": "multimarca",
-    "posicion": 8,
+    "posicion": 6,
     "activo": true,
     "comentario": ""
   },
@@ -264,14 +264,6 @@
     "comentario": ""
   },
   {
-    "id": 48,
-    "nombre": "",
-    "mesaId": "oppo",
-    "posicion": 9,
-    "activo": false,
-    "comentario": "Espacio ocupado con audifonos"
-  },
-  {
     "id": 34,
     "nombre": "Reno 14",
     "mesaId": "oppo",
@@ -382,5 +374,53 @@
     "posicion": 6,
     "activo": true,
     "comentario": ""
+  },
+  {
+    "id": 48,
+    "nombre": "",
+    "mesaId": "oppo",
+    "posicion": 9,
+    "activo": false,
+    "comentario": "Espacio ocupado con audifonos"
+  },
+  {
+    "id": 49,
+    "nombre": "",
+    "mesaId": "apple",
+    "posicion": 1,
+    "activo": false,
+    "comentario": "Espacio no usado"
+  },
+  {
+    "id": 50,
+    "nombre": "",
+    "mesaId": "apple",
+    "posicion": 2,
+    "activo": false,
+    "comentario": "Espacio no usado"
+  },
+  {
+    "id": 51,
+    "nombre": "",
+    "mesaId": "apple",
+    "posicion": 3,
+    "activo": false,
+    "comentario": "Espacio no usado"
+  },
+  {
+    "id": 52,
+    "nombre": "",
+    "mesaId": "multimarca",
+    "posicion": 2,
+    "activo": false,
+    "comentario": "Espacio no usado"
+  },
+  {
+    "id": 53,
+    "nombre": "",
+    "mesaId": "multimarca",
+    "posicion": 4,
+    "activo": false,
+    "comentario": "Espacio no usado"
   }
 ]

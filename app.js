@@ -27,7 +27,12 @@ const layoutConfig = {
   '5:4': {
     left:  [1,2,3,4,5],
     right: [6,7,8,9],
+  },  
+  '4:4': {
+    left:  [1,2,3,4],
+    right: [5,6,7,8],
   }
+  
 };
 
 const layoutOptions = {
@@ -328,7 +333,7 @@ function buildFormUrl(mesa, equipo) {
     'r54c22649fe74475ca36d0589c07c95d5': equipo.nombre,
     'rf5b8727fc3ae40ceaca472193b0b4332': "Si",
   });
-  // console.log(params.toString());
+  console.log(params.toString());
   return `${baseUrl}?${params.toString().replace(/\+/g, '%20')}`;
 }
 
