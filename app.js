@@ -131,7 +131,7 @@ function showMesaDetail(cardElement, mesa) {
       <h3>${equipo.nombre}</h3>
       `;
       //<p><strong>Pos:</strong> ${equipo.posicion}</p>
-      
+
     if (equipo.activo) {
       equipoCard.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -302,8 +302,8 @@ function normalizeOrder(ids, maxSlots, isLandscape = false) {
   if (isLandscape && list.length > layoutOptions.maxPerSide) {
     list = list.slice(0, layoutOptions.maxPerSide);
   }
-  console.log('IDs antes de ordenar:', ids);
-  console.log('IDs ordenados para layout:', list);
+/*   console.log('IDs antes de ordenar:', ids);
+  console.log('IDs ordenados para layout:', list); */
   return list;
 }
 
@@ -315,19 +315,20 @@ function computeStart(totalSlots, usedSlots) {
 
 function selectEquipo(equipo) {
   const formUrl = buildFormUrl(selectedMesa, equipo);
-  console.log('URL generada:', formUrl);
-  alert(`Equipo seleccionado: ${equipo.nombre}\n\nURL del formulario:\n${formUrl}`);
+  // console.log('URL generada:', formUrl);
+  // alert(`Equipo seleccionado: ${equipo.nombre}\n\nURL del formulario:\n${formUrl}`);
   // window.location.href = formUrl; // Descomentar para redirigir al formulario
 }
 
 function buildFormUrl(mesa, equipo) {
-  const baseUrl = 'https://forms.microsoft.com/Pages/ResponsePage.aspx';
+  const baseUrl = 'https://forms.office.com/Pages/ResponsePage.aspx';
   const params = new URLSearchParams({
-    'mesa': mesa.mesa,
-    'nombre_equipo': equipo.nombre,
-    'posicion': equipo.posicion,
-    'fecha': new Date().toISOString().split('T')[0],
+    // 'mesa': mesa.mesa,
+    'id': "t3MfOZClrUOY8IsFCYrMyJ0kez3gW0dBm3VfYHvC51hUMzc4OEtNN1RMNlcyNjNURVJQVDIxM0RGUi4u",
+    'r54c22649fe74475ca36d0589c07c95d5': encodeURIComponent(equipo.nombre),
+    'rf5b8727fc3ae40ceaca472193b0b4332': "Si",
   });
+  console.log(params.toString());
   return `${baseUrl}?${params.toString()}`;
 }
 
