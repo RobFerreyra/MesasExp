@@ -40,7 +40,7 @@ body {
 
 .card-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
@@ -240,5 +240,11 @@ body {
 
   .card-equipo p {
     font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 976px) {
+  .card-list {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
   }
 }
