@@ -45,7 +45,8 @@ const layoutOptions = {
 async function loadData() {
   try {
     const mesasResponse = await fetch('mesas.json');
-    const equiposResponse = await fetch('equipos.json');
+    // const equiposResponse = await fetch('equipos.json');
+    const equiposResponse = await equiposFromTable(); // Obtener equipos desde Power Automate
     
     if (!mesasResponse.ok || !equiposResponse.ok) {
       throw new Error('Error cargando archivos JSON');
@@ -322,7 +323,8 @@ function selectEquipo(equipo) {
   const formUrl = buildFormUrl(selectedMesa, equipo);
   // console.log('URL generada:', formUrl);
   // alert(`Equipo seleccionado: ${equipo.nombre}\n\nURL del formulario:\n${formUrl}`);
-  window.location.href = formUrl; // Descomentar para redirigir al formulario
+  // window.location.href = formUrl; // Descomentar para redirigir al formulario
+  window.open(formUrl, '_blank'); // Abrir en nueva pestaña
 }
 
 function buildFormUrl(mesa, equipo) {
@@ -333,7 +335,7 @@ function buildFormUrl(mesa, equipo) {
     'r54c22649fe74475ca36d0589c07c95d5': equipo.nombre,
     'rf5b8727fc3ae40ceaca472193b0b4332': "Si",
   });
-  console.log(params.toString());
+  // console.log(params.toString());
   return `${baseUrl}?${params.toString().replace(/\+/g, '%20')}`;
 }
 
@@ -356,3 +358,30 @@ document.addEventListener('click', (e) => {
 });
 
 loadData();
+
+async function equiposFromTable() {
+  const baseUrl = 'https://067780a69cefefe9b28d7562080c10.1c.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/e5f0e56c974b4d84bd05652e7dfc3616/triggers/manual/paths/invoke';
+  const params = new URLSearchParams({
+    'api-version': "1",
+    'sp': "/triggers/manual/run",
+    'sv': "1.0",
+    'sig': "zow66kyqQBbkiPMwjmaK0oTZT-NTaTY4wsxvV4VG76o"
+  });
+  try {
+    const response = await fetch(`${baseUrl}?${params.toString()}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ "equipos": {} })
+    });
+/*     if (!response.ok) {
+      throw new Error(`Error en la solicitud: ${response.statusText}`);
+    }
+    const data = await response.json();
+    console.log('Equipos desde Power Automate:', data); */
+    return response;
+  } catch (error) {
+    console.error('Error al obtener equipos:', error);
+  }
+}
