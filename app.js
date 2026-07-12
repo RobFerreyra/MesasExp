@@ -42,23 +42,56 @@ const layoutOptions = {
   maxPerSide: 5,
 };
 
+function capitalizar(value) {
+  if (typeof value !== 'string' || !value.trim()) return '';
+  return value[0].toUpperCase() + value.slice(1);
+}
+
+function getDistribForMesa(mesaId, posiciones) {
+  if (posiciones <= 5) {
+    if (mesaId === 'apple') return '4:4';
+    if (mesaId === 'huawei') return '0:5';
+  }
+  return '5:5';
+}
+
+function buildMesasFromEquipos(equipos) {
+  const conteoPorMesa = new Map();
+  (Object.entries(equipos) || []).forEach(([id, equipo]) => {
+    if (!equipo || !equipo.mesaId || !equipo.activo) return;
+    const cantidadActual = conteoPorMesa.get(equipo.mesaId) || 0;
+    conteoPorMesa.set(equipo.mesaId, cantidadActual + 1);
+  });
+
+  return Array.from(conteoPorMesa.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([mesaId, posiciones]) => ({
+      id: mesaId,
+      mesa: capitalizar(mesaId),
+      posiciones,
+      distrib: getDistribForMesa(mesaId, posiciones),
+      comentario: ''
+    }));
+}
+
 async function loadData() {
   try {
-    const mesasResponse = await fetch('mesas.json');
-    // const equiposResponse = await fetch('equipos.json');
-    const equiposResponse = await equiposFromTable(); // Obtener equipos desde Power Automate
-    
-    if (!mesasResponse.ok || !equiposResponse.ok) {
-      throw new Error('Error cargando archivos JSON');
+    //let equiposResponse = await fetch('equipos.json');
+    //if (!equiposResponse.ok) {
+    let equiposResponse = await equiposFromTable();
+    //}
+    if (!equiposResponse.ok) {
+      cardList.innerHTML = '<p>Error no se pudo leer tabla de equipos</p>';
+      //throw new Error('Error cargando los equipos');
     }
-    
-    mesasData = await mesasResponse.json();
+
     equiposData = await equiposResponse.json();
-    
+    mesasData = buildMesasFromEquipos(equiposData);
     renderMesasCards();
+
   } catch (error) {
     console.error('Error al cargar datos:', error);
-    cardList.innerHTML = '<p>Error cargando los datos. Verifica los archivos JSON.</p>';
+    cardList.innerHTML = '<p>Error cargando los datos. Verifica ejecución de flujo.</p>';
   }
 }
 
@@ -308,8 +341,6 @@ function normalizeOrder(ids, maxSlots, isLandscape = false) {
   if (isLandscape && list.length > layoutOptions.maxPerSide) {
     list = list.slice(0, layoutOptions.maxPerSide);
   }
-/*   console.log('IDs antes de ordenar:', ids);
-  console.log('IDs ordenados para layout:', list); */
   return list;
 }
 
@@ -321,8 +352,6 @@ function computeStart(totalSlots, usedSlots) {
 
 function selectEquipo(equipo) {
   const formUrl = buildFormUrl(selectedMesa, equipo);
-  // console.log('URL generada:', formUrl);
-  // alert(`Equipo seleccionado: ${equipo.nombre}\n\nURL del formulario:\n${formUrl}`);
   // window.location.href = formUrl; // Descomentar para redirigir al formulario
   window.open(formUrl, '_blank'); // Abrir en nueva pestaña
 }
@@ -335,7 +364,6 @@ function buildFormUrl(mesa, equipo) {
     'r54c22649fe74475ca36d0589c07c95d5': equipo.nombre,
     'rf5b8727fc3ae40ceaca472193b0b4332': "Si",
   });
-  // console.log(params.toString());
   return `${baseUrl}?${params.toString().replace(/\+/g, '%20')}`;
 }
 
@@ -375,11 +403,10 @@ async function equiposFromTable() {
       },
       body: JSON.stringify({ "equipos": {} })
     });
-/*     if (!response.ok) {
+  /*   if (!response.ok) {
       throw new Error(`Error en la solicitud: ${response.statusText}`);
     }
-    const data = await response.json();
-    console.log('Equipos desde Power Automate:', data); */
+  */
     return response;
   } catch (error) {
     console.error('Error al obtener equipos:', error);
