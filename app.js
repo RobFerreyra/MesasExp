@@ -76,13 +76,11 @@ function buildMesasFromEquipos(equipos) {
 
 async function loadData() {
   try {
-    //let equiposResponse = await fetch('equipos.json');
-    //if (!equiposResponse.ok) {
-    let equiposResponse = await equiposFromTable();
-    //}
-    if (!equiposResponse.ok) {
-      cardList.innerHTML = '<p>Error no se pudo leer tabla de equipos</p>';
-      //throw new Error('Error cargando los equipos');
+    const equiposResponse = await fetchWithTimeout((signal) => equiposFromTable(signal), 8000);
+
+    if (!equiposResponse || !equiposResponse.ok) {
+      cardList.innerHTML = '<p>No se pudieron cargar los equipos en este momento. Intenta de nuevo más tarde.</p>';
+      return;
     }
 
     equiposData = await equiposResponse.json();
@@ -91,7 +89,18 @@ async function loadData() {
 
   } catch (error) {
     console.error('Error al cargar datos:', error);
-    cardList.innerHTML = '<p>Error cargando los datos. Verifica ejecución de flujo.</p>';
+    cardList.innerHTML = '<p>No se pudieron cargar los equipos. Verifica la conexión e intenta nuevamente.</p>';
+  }
+}
+
+async function fetchWithTimeout(requestFn, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    return await requestFn(controller.signal);
+  } finally {
+    window.clearTimeout(timeoutId);
   }
 }
 
@@ -387,7 +396,7 @@ document.addEventListener('click', (e) => {
 
 loadData();
 
-async function equiposFromTable() {
+async function equiposFromTable(signal) {
   const baseUrl = 'https://067780a69cefefe9b28d7562080c10.1c.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/e5f0e56c974b4d84bd05652e7dfc3616/triggers/manual/paths/invoke';
   const params = new URLSearchParams({
     'api-version': "1",
@@ -395,20 +404,20 @@ async function equiposFromTable() {
     'sv': "1.0",
     'sig': "zow66kyqQBbkiPMwjmaK0oTZT-NTaTY4wsxvV4VG76o"
   });
+
   try {
     const response = await fetch(`${baseUrl}?${params.toString()}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ "equipos": {} })
+      body: JSON.stringify({ "equipos": {} }),
+      signal
     });
-  /*   if (!response.ok) {
-      throw new Error(`Error en la solicitud: ${response.statusText}`);
-    }
-  */
+
     return response;
   } catch (error) {
     console.error('Error al obtener equipos:', error);
+    throw error;
   }
 }
